@@ -74,6 +74,7 @@ export default {
   },
   created() {
     console.log(this.zhi);
+    console.log("这个值没有问题了");
   },
   computed: {
     sumPrice() {
