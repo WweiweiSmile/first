@@ -8,9 +8,9 @@
     </div>
     <div class="tail fr">
       <ul>
-        <li class="care">&nbsp;</li>
-        <li class="shopOrder">&nbsp;</li>
-        <li class="shopCar">&nbsp;</li>
+        <li class="care">&nbsp;1</li>
+        <li class="shopOrder">&nbsp;1</li>
+        <li class="shopCar">&nbsp;1</li>
         <li class="help">帮助</li>
         <li class="login">登录</li>
       </ul>
@@ -82,10 +82,16 @@
   width: 50px;
   height: 16px;
   font-size: 14px;
-  color: #a1a1a1;
+
   text-align: center;
   line-height: 16px;
   border-left: 1px solid #000000;
+  cursor: pointer;
+  color: transparent;
+}
+.tail ul li:nth-child(4),
+.tail ul li:nth-child(5) {
+  color: #a1a1a1;
 }
 .tail .care {
   border-left: none;
