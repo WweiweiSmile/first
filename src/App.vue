@@ -2,7 +2,8 @@
   <div id="app">
     <headers />
     <navbar />
-    <indexMain />
+    <shopCar />
+    <!-- <indexMain /> -->
     <mainFooter />
     <footers />
   </div>
@@ -14,6 +15,7 @@ import navbar from "./components/navbar.vue";
 import indexMain from "./components/indexMain.vue";
 import footers from "./components/footers.vue";
 import mainFooter from "./components/mainFooter.vue";
+import shopCar from "./components/shopCar.vue";
 export default {
   name: "App",
   components: {
@@ -21,7 +23,8 @@ export default {
     navbar,
     indexMain,
     footers,
-    mainFooter
+    mainFooter,
+    shopCar
   }
 };
 </script>
