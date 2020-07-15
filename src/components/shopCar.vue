@@ -32,7 +32,7 @@
         </td>
         <td class="product">
           <div>
-            <img :src="item.img" />
+            <img :src="img_url" />
             <div class="details">
               <div class="name">{{item.name}}</div>
               <div class="color">颜色:{{item.color}}</div>
@@ -131,7 +131,8 @@
   height: 40px;
   margin-bottom: 10px;
   border: none;
-  background: #eaeaea;
+  background: #ececec;
+  box-shadow: 5px 5px 10px #dcdcdc;
   font-size: 14px;
 }
 .table .productRow {
@@ -236,6 +237,7 @@
 export default {
   data() {
     return {
+      img_url: "https://img01.vgtime.com/photo/web/150422121556476.jpg",
       tableData: [
         {
           name:
