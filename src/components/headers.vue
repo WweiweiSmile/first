@@ -1,6 +1,6 @@
 <template>
   <div class="headers">
-    <div class="logo fl"></div>
+    <div class="logo fl" @click="index()"></div>
     <div class="searchs fl">
       <input type="text" class="text" placeholder="请输入你要搜索的内容" />
       <div class="seek">分类搜索</div>
@@ -9,10 +9,10 @@
     <div class="tail fr">
       <ul>
         <li class="care">&nbsp;1</li>
-        <li class="shopOrder">&nbsp;1</li>
-        <li class="shopCar">&nbsp;1</li>
-        <li class="help">帮助</li>
-        <li class="login">登录</li>
+        <li class="shopOrder" @click="order()">&nbsp;1</li>
+        <li class="shopCar" @click="shopCar()">&nbsp;1</li>
+        <li class="help" @click="orderMeg()">帮助</li>
+        <li class="login" @click="login">登录</li>
       </ul>
     </div>
   </div>
@@ -35,6 +35,7 @@
   width: 200px;
   height: 60px;
   background: url("../assets/images/header/logo.png") left center no-repeat;
+  cursor: pointer;
 }
 
 /* 搜索框 */
@@ -106,5 +107,28 @@
 }
 </style>
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      order() {
+        this.$router.push("/order");
+      },
+      shopCar() {
+        this.$router.push("/shopCar");
+      },
+      index() {
+        this.$router.push("/index");
+      },
+      orderMeg() {
+        this.$router.push("/orderMeg");
+      }
+    };
+  },
+  methods: {
+    login() {
+      console.log("1");
+      this.$router.push("/login");
+    }
+  }
+};
 </script>

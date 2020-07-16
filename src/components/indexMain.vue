@@ -8,7 +8,7 @@
       </div>
     </div>
     <div class="banner">
-      <div class="one">
+      <div class="one" @click="productDetail()">
         <div class="sBanner fl"></div>
         <div class="details fr details1">
           <div class="details1">
@@ -492,6 +492,9 @@ export default {
             }
           }
         }
+      },
+      productDetail() {
+        this.$router.push("/productDetail");
       }
     };
   }
