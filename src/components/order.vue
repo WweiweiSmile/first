@@ -35,12 +35,12 @@
       <div class="tables fr">
         <table class="table">
           <tr class="head">
-            <th style="width:400px">商品</th>
-            <th>单价(元)</th>
-            <th>数量</th>
-            <th>售后</th>
-            <th>实付款(元)</th>
-            <th>交易状态</th>
+            <th style="width:365px">商品</th>
+            <th style="width:80px">单价(元)</th>
+            <th style="width:40px">数量</th>
+            <th style="width:80px">售后</th>
+            <th style="width:100px">实付款(元)</th>
+            <th style="width:100px">交易状态</th>
             <th>操作</th>
           </tr>
         </table>
@@ -54,20 +54,37 @@
           <div class="detail">
             <ul>
               <li class="product">
-                <div>
-                  <img class="fl" :src="img_url" alt />
-                  <div class="productDetail fr">
-                    <div class="name">{{item.name}}</div>
-                    <div class="color">颜色:{{item.color}}</div>
-                  </div>
+                <img class="fl" :src="img_url" alt />
+                <div class="productDetail fl">
+                  <div class="name">{{item.name}}</div>
+                  <div class="color">颜色:{{item.color}}</div>
                 </div>
               </li>
-              <li class="price"></li>
-              <li class="num"></li>
-              <li class="sale"></li>
-              <li class="buyPrice"></li>
-              <li class="status"></li>
-              <li class="opration"></li>
+              <li class="price">
+                <p>
+                  <span>专属价</span>
+                  <br />
+                  <span>￥ 8800</span>
+                </p>
+              </li>
+              <li class="num">
+                <p>1件</p>
+              </li>
+              <li class="sale">
+                <p>退款/退货</p>
+                <p>我要维权</p>
+              </li>
+              <li class="buyPrice">
+                <p>￥ 1222.00</p>
+              </li>
+              <li class="status">
+                <p class="sellShop">已发货</p>
+                <p>订单详情</p>
+                <p>查看物流</p>
+              </li>
+              <li class="opration">
+                <button class="button">确定收货</button>
+              </li>
             </ul>
           </div>
         </div>
@@ -106,13 +123,14 @@
 }
 /* 菜单栏 menu */
 .menu {
-  width: 200px;
+  width: 150px;
 }
 .menuItem {
   position: relative;
-  width: 200px;
+  width: 150px;
   height: 40px;
   margin-top: 20px;
+  font-size: 14px;
   background: #0aa2ed;
 }
 .menuItem:first-child {
@@ -157,9 +175,10 @@
   background: url("../assets/images/myOrder/myOrder1.png") no-repeat;
 }
 .myOrderContent {
-  width: 200px;
+  width: 150px;
   margin: 0px;
   padding: 0px;
+  font-size: 14px;
   background: #ffffff;
 }
 .myOrderContent ul {
@@ -175,7 +194,7 @@
 }
 /* 表格主体 */
 .table {
-  width: 780px;
+  width: 830px;
   text-align: center;
   color: #000;
   border-spacing: 0px;
@@ -213,22 +232,72 @@
   background: url("../assets/images/myOrder/kefuf.gif");
 }
 .detail ul {
-  height: 120px;
+  height: 100px;
   margin: 0px;
   padding: 0px;
   background: #ffffff;
 }
 .detail ul li {
-  display: inline-block;
-  margin: 0px;
-  padding: 0px;
+  float: left;
+  height: 100px;
+  font-size: 14px;
   list-style: none;
+  border-right: 1px solid #ebebeb;
 }
-
+.detail ul li:last-child {
+  border: none;
+}
+.detail .product {
+  width: 350px;
+  height: 70px;
+  padding: 15px;
+  padding-right: 0px;
+}
 .detail .product img {
   display: inline-block;
   width: 70px;
   height: 70px;
+}
+.detail p {
+  font-size: 14px;
+  text-align: center;
+}
+.detail .product .productDetail {
+  margin-left: 20px;
+}
+.detail .price {
+  width: 70px;
+  height: 100px;
+}
+.detail .num {
+  width: 40px;
+  text-align: center;
+}
+.detail .sale {
+  width: 80px;
+}
+.detail .buyPrice {
+  width: 100px;
+}
+.detail .status {
+  width: 90px;
+}
+.detail .status .sellShop {
+  padding-left: 20px;
+  background: url("../assets/images/myOrder/car.png") 20px center no-repeat;
+}
+.detail .status p:last-child {
+  margin: 0px;
+}
+.detail .opration .button {
+  width: 70px;
+  height: 30px;
+  margin-top: 30px;
+  margin-left: 5px;
+  text-align: center;
+  border: none;
+  background: #20aff5;
+  color: white;
 }
 </style>
 <script>
