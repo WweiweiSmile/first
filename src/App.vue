@@ -2,7 +2,9 @@
   <div id="app">
     <headers />
     <navbar />
-    <order />
+    <router-view></router-view>
+
+    <!-- <order /> -->
     <!-- <shopCar /> -->
     <!-- <indexMain /> -->
     <mainFooter />
